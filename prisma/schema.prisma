@@ -11,10 +11,9 @@ datasource db {
 }
 
 model Product {
-  id        Int      @id @default(autoincrement())
+  id        String   @id @default(cuid())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-
   name        String
   description String?
   price       Decimal
